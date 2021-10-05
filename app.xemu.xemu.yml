@@ -1,4 +1,4 @@
-app-id: app.xemu.Xemu
+app-id: app.xemu.xemu
 runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
@@ -65,19 +65,19 @@ modules:
     post-install:
       - |-
         for px in 16 32 48 64 128 256 512; do
-          install -Dm644 ../ui/icons/xemu_${px}x${px}.png /app/share/icons/hicolor/${px}x${px}/apps/app.xemu.Xemu.png
+          install -Dm644 ../ui/icons/xemu_${px}x${px}.png /app/share/icons/hicolor/${px}x${px}/apps/app.xemu.xemu.png
         done
-      - install -Dm644 ../ui/icons/xemu.svg /app/share/icons/hicolor/scalable/apps/app.xemu.Xemu.svg
+      - install -Dm644 ../ui/icons/xemu.svg /app/share/icons/hicolor/scalable/apps/app.xemu.xemu.svg
       - desktop-file-install ../ui/xemu.desktop --dir /app/share/applications
-      - sed -i 's/^Icon=xemu/Icon=app.xemu.Xemu/' /app/share/applications/xemu.desktop
+      - sed -i 's/^Icon=xemu/Icon=app.xemu.xemu/' /app/share/applications/xemu.desktop
       - mv qemu-system-i386 /app/bin/xemu
       - mkdir -p /app/share/licenses/xemu
       - cd .. && python3 scripts/gen-license.py > /app/share/licenses/xemu/LICENSE.txt
-      - install -Dm644 ../app.xemu.Xemu.metainfo.xml /app/share/metainfo/app.xemu.Xemu.metainfo.xml
+      - install -Dm644 ../app.xemu.xemu.metainfo.xml /app/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: git
         url: https://github.com/mborgerson/xemu
         tag: xemu-v0.6.1
 
       - type: file
-        path: app.xemu.Xemu.metainfo.xml
+        path: app.xemu.xemu.metainfo.xml
