@@ -76,8 +76,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/mborgerson/xemu.git
-        tag: build-202201112120
-        commit: 7d101d5193cdb6bcacc6462c2dd30c1c01767c67
+        tag: build-202201120853
+        commit: 27afd421646fd115aa52efb276625626d705a52c
 
       - type: file
         path: app.xemu.xemu.metainfo.xml
