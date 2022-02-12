@@ -15,7 +15,8 @@ jobs:
           commit=${commit_and_tag%%	*}
           version=${commit_and_tag##*/}
           sed -i "/xemu.git/{n;s/commit.*/commit: $commit/}" app.xemu.xemu.yml
-          sed -i "s|    <release .*|    <release date=\"$(date -I)\" version=\"$version\" />|" app.xemu.xemu.metainfo.xml
+          # if the commit has changed then modify the appstream file too
+          git diff --quiet || sed -i "s|    <release .*|    <release date=\"$(date -I)\" version=\"$version\" />|" app.xemu.xemu.metainfo.xml
       - name: Push the change
         run: |
           git config user.name CI
