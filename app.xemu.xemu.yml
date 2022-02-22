@@ -54,7 +54,7 @@ modules:
     builddir: true
     no-make-install: true
     build-options:
-      cflags: "-O3 -DXBOX=1 -Wno-error=redundant-decls"
+      cflags: -O3 -DXBOX=1 -Wno-error=redundant-decls
     config-opts:
       - --audio-drv-list=sdl
       - --disable-werror
@@ -76,7 +76,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/mborgerson/xemu.git
-        commit: 8919bae31156a8534d529be0012670020fcd5704
+        commit: 83d4cbb4183e8f0d9bdc07eaf676c7e3ede6cc81
         branch: master
 
       - type: file
