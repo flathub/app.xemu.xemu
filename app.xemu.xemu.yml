@@ -76,7 +76,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/mborgerson/xemu.git
-        commit: 83d4cbb4183e8f0d9bdc07eaf676c7e3ede6cc81
+        commit: 2b27021eef6165bba3eec0c7d7e4e02b65de6036
         branch: master
 
       - type: file
