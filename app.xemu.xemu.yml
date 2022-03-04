@@ -78,6 +78,13 @@ modules:
         url: https://github.com/mborgerson/xemu.git
         commit: a32f271d552ce62a9c939e61caba3793fb4ead7b
         branch: master
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/mborgerson/xemu/releases/latest
+          tag-query: .tag_name
+          version-query: $tag | sub("^gh-release/"; "")
+          timestamp-query: .published_at
+          is-main-source: true
 
       - type: file
         path: app.xemu.xemu.metainfo.xml

@@ -1,6 +1,6 @@
 # Flatpak for xemu
 
-## Installation
+## Install
 
 1. [Set up Flatpak](https://www.flatpak.org/setup/)
 
