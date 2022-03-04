@@ -27,8 +27,9 @@
   <url type="help">https://xemu.app/docs</url>
   <url type="faq">https://xemu.app/docs/faq</url>
   <developer_name>Matt Borgerson</developer_name>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <releases>
-    <release date="2022-02-12" version="0.6.2-75-g8919bae311" />
+    <release version="0.6.2-79-ga32f271d55" date="2022-02-28"/>
+    <release date="2022-02-12" version="0.6.2-75-g8919bae311"/>
   </releases>
 </component>
