@@ -29,6 +29,7 @@
   <developer_name>Matt Borgerson</developer_name>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="xemu-v0.6.3" date="2022-04-25"/>
     <release version="0.6.2-99-g440f4c53ec" date="2022-04-24"/>
     <release version="0.6.2-95-g5c02155e56" date="2022-04-23"/>
     <release version="0.6.2-90-g6f507c80af" date="2022-03-23"/>
