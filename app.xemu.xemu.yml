@@ -12,6 +12,7 @@ finish-args:
   - --socket=x11
   - --share=ipc
   - --unset-env=QEMU_AUDIO_DRV
+# --unset-env=QEMU_AUDIO_DRV fixes issues with openSUSE systems, QEMU_AUDIO_DRV is defined as "pa" causing xemu to not launch
 
 modules:
   - name: libpcap
