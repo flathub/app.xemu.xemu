@@ -16,8 +16,8 @@ To uninstall: `flatpak uninstall -y app.xemu.xemu`
 
 ## Usage
 
-Only `~/.var/app/app.xemu.xemu/data/xemu/xemu` can be written by xemu.
-The Hard Disk image has to be placed there, for example, at `~/.var/app/app.xemu.xemu/data/xemu/xemu/xbox_hdd.qcow2`.
+Only `$HOME/.var/app/app.xemu.xemu/data/xemu/xemu` can be written by xemu.
+The Hard Disk image has to be placed there, for example, at `$HOME/.var/app/app.xemu.xemu/data/xemu/xemu/xbox_hdd.qcow2`.
 
 ## Build
 
