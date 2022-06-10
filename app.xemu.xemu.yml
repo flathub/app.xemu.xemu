@@ -87,8 +87,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/mborgerson/xemu.git
-        tag: v0.7.30
-        commit: 30d3bb53b5823045d7afa46391c1531854cc3a45
+        tag: v0.7.31
+        commit: 5cb31da44bf805804df47328893a59d06729926c
         x-checker-data:
           type: json
           url: https://api.github.com/repos/mborgerson/xemu/releases/latest
