@@ -95,6 +95,7 @@ modules:
           tag-query: .tag_name
           timestamp-query: .published_at
           is-main-source: true
+          version-query: .tag_name
 
       - type: file
         path: app.xemu.xemu.metainfo.xml
