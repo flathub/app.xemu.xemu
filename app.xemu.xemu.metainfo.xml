@@ -29,6 +29,7 @@
   <developer_name>Matt Borgerson</developer_name>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="v0.7.67" date="2022-08-05"/>
     <release version="v0.7.66" date="2022-07-25"/>
     <release version="v0.7.64" date="2022-07-19"/>
     <release version="v0.7.63" date="2022-07-18"/>
