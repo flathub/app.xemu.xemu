@@ -86,12 +86,12 @@ modules:
       - install -Dm644 ../app.xemu.xemu.metainfo.xml /app/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: git
-        url: https://github.com/mborgerson/xemu.git
+        url: https://github.com/xemu-project/xemu.git
         tag: v0.7.72
         commit: a0cffd77debf6caf8804a0fbb2d04fb9c54c13a6
         x-checker-data:
           type: json
-          url: https://api.github.com/repos/mborgerson/xemu/releases/latest
+          url: https://api.github.com/repos/xemu-project/xemu/releases/latest
           tag-query: .tag_name
           timestamp-query: .published_at
           is-main-source: true
