@@ -5,7 +5,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
   <name>xemu</name>
-  <summary>Original Xbox Emulator.</summary>
+  <summary>Original Xbox Emulator</summary>
   <description>
     <p>
       A free and open-source application that emulates the original Microsoft Xbox game console, enabling people to play their original Xbox games on Windows, macOS, and Linux systems.
