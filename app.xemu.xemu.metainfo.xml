@@ -8,10 +8,10 @@
   <summary>Original Xbox Emulator</summary>
   <description>
     <p>
-      A free and open-source application that emulates the original Microsoft Xbox game console, enabling people to play their original Xbox games on Windows, macOS, and Linux systems.
+      A free and open-source application that emulates the original Microsoft Xbox game console, enabling people to play their original Xbox games on Windows, macOS, and Linux systems. Supports connecting up to 4 controllers for local play, networking for multiplayer, resolution scaling, and more.
     </p>
     <p>
-     Only "$HOME/.var/app/app.xemu.xemu/data/xemu/xemu" can be written by xemu.
+     <b>Note:</b> Only "$HOME/.var/app/app.xemu.xemu/data/xemu/xemu" can be written by xemu.
      The Hard Disk image has to be placed there, for example, at "$HOME/.var/app/app.xemu.xemu/data/xemu/xemu/xbox_hdd.qcow2".
     </p>
   </description>
