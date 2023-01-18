@@ -75,15 +75,22 @@ modules:
     post-install:
       - |-
         for px in 16 32 48 64 128 256 512; do
-          install -Dm644 ../ui/icons/xemu_${px}x${px}.png /app/share/icons/hicolor/${px}x${px}/apps/app.xemu.xemu.png
+          install -Dm644 ../ui/icons/xemu_${px}x${px}.png $FLATPAK_DEST/share/icons/hicolor/${px}x${px}/apps/app.xemu.xemu.png
         done
-      - install -Dm644 ../ui/icons/xemu.svg /app/share/icons/hicolor/scalable/apps/app.xemu.xemu.svg
-      - desktop-file-install ../ui/xemu.desktop --dir /app/share/applications
-      - sed -i 's/^Icon=xemu/Icon=app.xemu.xemu/' /app/share/applications/xemu.desktop
-      - mv qemu-system-i386 /app/bin/xemu
-      - mkdir -p /app/share/licenses/xemu
-      - cd .. && python3 scripts/gen-license.py > /app/share/licenses/xemu/LICENSE.txt
-      - install -Dm644 ../app.xemu.xemu.metainfo.xml /app/share/metainfo/app.xemu.xemu.metainfo.xml
+      - install -Dm644 ../ui/icons/xemu.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/app.xemu.xemu.svg
+      - desktop-file-install ../ui/xemu.desktop --dir $FLATPAK_DEST/share/applications
+      - sed -i 's/^Icon=xemu/Icon=app.xemu.xemu/' $FLATPAK_DEST/share/applications/xemu.desktop
+      - mv qemu-system-i386 $FLATPAK_DEST/bin/xemu
+      - mkdir -p $FLATPAK_DEST/share/licenses/xemu
+      - cd .. && python3 scripts/gen-license.py > $FLATPAK_DEST/share/licenses/xemu/LICENSE.txt
+      - mkdir $FLATPAK_DEST/share/metainfo
+      - |-
+        awk '/<\/description>/ {
+        print "    <p><b>Note:</b> Only \"$HOME/.var/app/app.xemu.xemu/data/xemu/xemu\" can be written by xemu."
+        print "    The Hard Disk image has to be placed there, for example, at \"$HOME/.var/app/app.xemu.xemu/data/xemu/xemu/xbox_hdd.qcow2\".</p>"
+        } { print $0 }' ../xemu.appdata.xml > $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
+
+      - sed -i 's|</component>|<releases><release date="'$(git show -s --format=%cs)'" version="'$(git describe --tags)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: git
         url: https://github.com/xemu-project/xemu.git
@@ -96,6 +103,3 @@ modules:
           timestamp-query: .published_at
           is-main-source: true
           version-query: .tag_name
-
-      - type: file
-        path: app.xemu.xemu.metainfo.xml
