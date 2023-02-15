@@ -90,12 +90,13 @@ modules:
         print "    The Hard Disk image has to be placed there, for example, at \"$HOME/.var/app/app.xemu.xemu/data/xemu/xemu/xbox_hdd.qcow2\".</p>"
         } { print $0 }' ../xemu.appdata.xml > $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
 
-      - sed -i 's|</component>|<releases><release date="'$(git show -s --format=%cs)'" version="'$(git describe --tags)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
+      - sed -i 's|</component>|<releases><release date="'$(git show -s --format=%cs)'"
+        version="'$(git describe --tags)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: git
         url: https://github.com/xemu-project/xemu.git
-        tag: v0.7.83
-        commit: ca6e712ecd797c77ba501402cfcd64dde55d2c17
+        tag: v0.7.84
+        commit: d8fa50e524c22f85ecb2e43108fd6a5501744351
         x-checker-data:
           type: json
           url: https://api.github.com/repos/xemu-project/xemu/releases/latest
