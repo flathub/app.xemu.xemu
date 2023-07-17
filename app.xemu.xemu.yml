@@ -95,8 +95,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/xemu-project/xemu.git
-        tag: v0.7.98
-        commit: 7bfb7c85378f64f93556c365ea0cc18cb2181dc8
+        tag: v0.7.99
+        commit: 158cc0d14001450c082e17ffd8cd407ac795525e
         x-checker-data:
           type: json
           url: https://api.github.com/repos/xemu-project/xemu/releases/latest
