@@ -50,8 +50,8 @@ modules:
       - /lib/*.a
     sources:
       - type: archive
-        url: https://mesa.freedesktop.org/archive/glu/glu-9.0.2.tar.xz
-        sha256: 6e7280ff585c6a1d9dfcdf2fca489251634b3377bfc33c29e4002466a38d02d4
+        url: https://mesa.freedesktop.org/archive/glu/glu-9.0.3.tar.xz
+        sha256: bd43fe12f374b1192eb15fe20e45ff456b9bc26ab57f0eee919f96ca0f8a330f
         x-checker-data:
           type: anitya
           project-id: 13518
@@ -102,8 +102,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/xemu-project/xemu.git
-        tag: v0.7.98
-        commit: 7bfb7c85378f64f93556c365ea0cc18cb2181dc8
+        tag: v0.7.101
+        commit: 8702713963ae6f2e01b4b27190c4d54b4fab1a03
         x-checker-data:
           type: json
           url: https://api.github.com/repos/xemu-project/xemu/releases/latest
