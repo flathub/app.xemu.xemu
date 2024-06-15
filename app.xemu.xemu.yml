@@ -48,23 +48,6 @@ modules:
           stable-only: true
           url-template: https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v$version/libslirp-v$version.tar.gz
 
-  - name: libglu
-    buildsystem: meson
-    cleanup:
-      - /include
-      - /lib/debug
-      - /lib/pkgconfig
-      - /lib/*.a
-    sources:
-      - type: archive
-        url: https://mesa.freedesktop.org/archive/glu/glu-9.0.3.tar.xz
-        sha256: bd43fe12f374b1192eb15fe20e45ff456b9bc26ab57f0eee919f96ca0f8a330f
-        x-checker-data:
-          type: anitya
-          project-id: 13518
-          stable-only: true
-          url-template: https://mesa.freedesktop.org/archive/glu/glu-$version.tar.xz
-
   - name: PyYAML
     buildsystem: simple
     build-commands:
