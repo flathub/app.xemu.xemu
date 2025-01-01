@@ -11,7 +11,7 @@ finish-args:
   - --socket=pulseaudio
   - --socket=fallback-x11
   - --socket=wayland
-  - --env=SDL_VIDEODRIVER="wayland,x11"
+  - --env=SDL_VIDEODRIVER=wayland,x11
   - --share=ipc
   # Fixes issues with openSUSE systems, QEMU_AUDIO_DRV is defined as "pa" causing xemu to not launch
   - --unset-env=QEMU_AUDIO_DRV
