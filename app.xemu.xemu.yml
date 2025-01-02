@@ -100,6 +100,7 @@ modules:
       - type: archive
         url: https://github.com/xemu-project/xemu/releases/download/v0.8.2/src.tar.gz
         sha256: 5f7e439d8d99cdd49c7d349aac4f2a86e8121eba3b757507c6c6f71469b9a3a1
+        strip-components: 0
         x-checker-data:
           type: json
           url: https://api.github.com/repos/xemu-project/xemu/releases/latest
