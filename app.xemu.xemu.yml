@@ -94,12 +94,12 @@ modules:
         print "    The Hard Disk image has to be placed there, for example, at \"$HOME/.var/app/app.xemu.xemu/data/xemu/xemu/xbox_hdd.qcow2\".</p>"
         } { print $0 }' ../xemu.metainfo.xml > $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
 
-      - sed -i 's|</component>|<releases><release date="'$(date +%Y-%m-%d)'"
-        version="'$(cat ../XEMU_VERSION)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
+      - sed -i 's|</component>|<releases><release date="'$(date +%Y-%m-%d)'" version="'$(cat
+        ../XEMU_VERSION)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/xemu-project/xemu/releases/download/v0.8.2/src.tar.gz
-        sha256: 5f7e439d8d99cdd49c7d349aac4f2a86e8121eba3b757507c6c6f71469b9a3a1
+        url: https://github.com/xemu-project/xemu/releases/download/v0.8.7/src.tar.gz
+        sha256: 786c31061cd8183a2e063080758b53495597970464b4d40da4b02830be271093
         strip-components: 0
         x-checker-data:
           type: json
@@ -108,4 +108,4 @@ modules:
           is-main-source: true
           version-query: .tag_name
           url: https://api.github.com/repos/xemu-project/xemu/releases/latest
-          url-query: ".assets[] | select(.name==\"src.tar.gz\") | .browser_download_url"
+          url-query: .assets[] | select(.name=="src.tar.gz") | .browser_download_url
