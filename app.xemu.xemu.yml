@@ -98,8 +98,8 @@ modules:
         ../XEMU_VERSION)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/xemu-project/xemu/releases/download/v0.8.56/src.tar.gz
-        sha256: 23030583ea24f948781c1b2e060c9b1297844cc8b396b8c13d77b4fdc13a36df
+        url: https://github.com/xemu-project/xemu/releases/download/v0.8.57/src.tar.gz
+        sha256: c455942a813c69b6352f76bd4d1305725fdb0d0ac2af03f5a660b86f4023fcc1
         strip-components: 0
         x-checker-data:
           type: json
