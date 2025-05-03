@@ -21,7 +21,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           entrypoint: /bin/sh
-          args: -c "git config --global --add safe.directory /github/workspace && cd /github/workspace && /app/flatpak-external-data-checker --update --never-fork app.xemu.xemu.yaml"
+          args: -c "git config --global --add safe.directory /github/workspace && cd /github/workspace && /app/flatpak-external-data-checker --update --never-fork app.xemu.xemu.yml"
 
       - name: Set auto-merge
         run: gh pr merge --rebase --auto $(git branch --show-current)
