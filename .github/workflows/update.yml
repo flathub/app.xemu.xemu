@@ -24,7 +24,7 @@ jobs:
           args: -c "git config --global --add safe.directory /github/workspace && cd /github/workspace && /app/flatpak-external-data-checker --update --never-fork app.xemu.xemu.yml"
 
       - name: Set auto-merge
-        run: gh pr merge --rebase --auto $(git branch --show-current)
+        run: gh pr merge --rebase --auto $(git branch --show-current) || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
