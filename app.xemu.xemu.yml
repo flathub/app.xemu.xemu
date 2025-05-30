@@ -42,8 +42,8 @@ modules:
       - /include
     sources:
       - type: archive
-        url: https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.0/libslirp-v4.9.0.tar.gz
-        sha256: e744a32767668fe80e3cb3bd75d10d501f981e98c26a1f318154a97e99cdac22
+        url: https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.1/libslirp-v4.9.1.tar.gz
+        sha256: 3970542143b7c11e6a09a4d2b50f30a133473c41f15ed0bdcc3b7a1c450d9a5c
         x-checker-data:
           type: anitya
           project-id: 96796
@@ -98,8 +98,8 @@ modules:
         ../XEMU_VERSION)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/xemu-project/xemu/releases/download/v0.8.66/src.tar.gz
-        sha256: e339e44978fc84a9f0cabeb339e3a2babdb7dc608d93b9c1c859ba9bf3b9d61c
+        url: https://github.com/xemu-project/xemu/releases/download/v0.8.67/src.tar.gz
+        sha256: d638fd1ce4133b972e949f7d98da0590486b653acab5e503f78237751ed52b6e
         strip-components: 0
         x-checker-data:
           type: json
