@@ -1,6 +1,6 @@
 app-id: app.xemu.xemu
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: xemu
 rename-desktop-file: xemu.desktop
@@ -53,7 +53,7 @@ modules:
   - name: PyYAML
     buildsystem: simple
     build-commands:
-      - python3 setup.py install --prefix=/app --root=/
+      - pip install --prefix=/app --no-build-isolation .
     sources:
       - type: archive
         url: https://github.com/yaml/pyyaml/archive/refs/tags/6.0.2.tar.gz
@@ -63,6 +63,34 @@ modules:
           project-id: 4123
           stable-only: true
           url-template: https://github.com/yaml/pyyaml/archive/refs/tags/$version.tar.gz
+
+  - name: distlib
+    buildsystem: simple
+    build-commands:
+      - pip install --prefix=/app --no-build-isolation .
+    sources:
+      - type: archive
+        url: https://github.com/pypa/distlib/archive/refs/tags/0.4.0.tar.gz
+        sha256: 98fb21cbb8c43d3deafc688ff58e024e79712568e837407d16b7037cd28d0041
+        x-checker-data:
+          type: anitya
+          project-id: 34504
+          stable-only: true
+          url-template: https://github.com/pypa/distlib/archive/refs/tags/$version.tar.gz
+
+  - name: xxhash
+    no-autogen: true
+    make-install-args:
+      - PREFIX=/app
+    sources:
+      - type: archive
+        url: https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz
+        sha256: aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80
+        x-checker-data:
+          type: anitya
+          project-id: 17583
+          stable-only: true
+          url-template: https://github.com/Cyan4973/xxHash/archive/refs/tags/v$version.tar.gz
 
   - name: xemu
     buildsystem: autotools
@@ -98,8 +126,8 @@ modules:
         ../XEMU_VERSION)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/xemu-project/xemu/releases/download/v0.8.96/src.tar.gz
-        sha256: 7e784ea36dde88e25383f71bba59babc457adf749a18421b608bdbb747547286
+        url: https://github.com/xemu-project/xemu/releases/download/v0.8.97/src.tar.gz
+        sha256: c7651eedb346b242fd30e13efea850f4731d8584c8b643ab392e167a5aa67985
         strip-components: 0
         x-checker-data:
           type: json
