@@ -22,7 +22,6 @@ modules:
     cleanup:
       - /bin
       - /include
-      - /lib/debug
       - /lib/pkgconfig
       - /lib/*.a
       - /share
