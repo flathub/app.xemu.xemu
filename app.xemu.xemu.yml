@@ -16,15 +16,17 @@ finish-args:
   # Fixes issues with openSUSE systems, QEMU_AUDIO_DRV is defined as "pa" causing xemu to not launch
   - --unset-env=QEMU_AUDIO_DRV
 
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/man
+  - '*.a'
+
 modules:
   - name: libpcap
     buildsystem: cmake-ninja
     cleanup:
       - /bin
-      - /include
-      - /lib/pkgconfig
-      - /lib/*.a
-      - /share
     sources:
       - type: archive
         url: https://www.tcpdump.org/release/libpcap-1.10.6.tar.gz
@@ -37,8 +39,6 @@ modules:
 
   - name: libslirp
     buildsystem: meson
-    cleanup:
-      - /include
     sources:
       - type: archive
         url: https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.1/libslirp-v4.9.1.tar.gz
