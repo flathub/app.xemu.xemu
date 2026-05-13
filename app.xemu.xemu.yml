@@ -110,7 +110,7 @@ modules:
         done
       - install -Dm644 ../ui/icons/xemu.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/app.xemu.xemu.svg
       - desktop-file-install ../ui/xemu.desktop --dir $FLATPAK_DEST/share/applications
-      - desktop-file-edit --set-key=Icon=xemu --set-value=app.xemu.xemu $FLATPAK_DEST/share/applications/xemu.desktop
+      - desktop-file-edit --set-icon=app.xemu.xemu $FLATPAK_DEST/share/applications/xemu.desktop
       - mv qemu-system-i386 $FLATPAK_DEST/bin/xemu
       - mkdir -p $FLATPAK_DEST/share/licenses/xemu
       - cd .. && python3 scripts/gen-license.py > $FLATPAK_DEST/share/licenses/xemu/LICENSE.txt
