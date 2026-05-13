@@ -110,17 +110,12 @@ modules:
         done
       - install -Dm644 ../ui/icons/xemu.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/app.xemu.xemu.svg
       - desktop-file-install ../ui/xemu.desktop --dir $FLATPAK_DEST/share/applications
-      - sed -i 's/^Icon=xemu/Icon=app.xemu.xemu/' $FLATPAK_DEST/share/applications/xemu.desktop
+      - desktop-file-edit --set-key=Icon=xemu --set-value=app.xemu.xemu $FLATPAK_DEST/share/applications/xemu.desktop
       - mv qemu-system-i386 $FLATPAK_DEST/bin/xemu
       - mkdir -p $FLATPAK_DEST/share/licenses/xemu
       - cd .. && python3 scripts/gen-license.py > $FLATPAK_DEST/share/licenses/xemu/LICENSE.txt
       - mkdir $FLATPAK_DEST/share/metainfo
-      - |-
-        awk '/<\/description>/ {
-        print "    <p><em>Note:</em> Only \"$HOME/.var/app/app.xemu.xemu/data/xemu/xemu\" can be written by xemu."
-        print "    The Hard Disk image has to be placed there, for example, at \"$HOME/.var/app/app.xemu.xemu/data/xemu/xemu/xbox_hdd.qcow2\".</p>"
-        } { print $0 }' ../xemu.metainfo.xml > $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
-
+      - cp ../xemu.metainfo.xml $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
       - sed -i 's|</component>|<releases><release date="'$(date +%Y-%m-%d)'" version="'$(cat
         ../XEMU_VERSION)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:

@@ -1,0 +1,15 @@
+diff --git a/xemu.metainfo.xml b/xemu.metainfo.xml
+index c0827632bf..e17bd8b158 100644
+--- a/xemu.metainfo.xml
++++ b/xemu.metainfo.xml
+@@ -14,6 +14,10 @@
+     <p>
+        A free and open-source application that emulates the original Microsoft Xbox game console. Supports connecting up to 4 controllers for local play, networking for multiplayer, resolution scaling, and more.
+     </p>
++    <p>
++      <em>Note:</em> Only "$HOME/.var/app/app.xemu.xemu/data/xemu/xemu" can be written by xemu.
++      The Hard Disk image has to be placed there, for example, at "$HOME/.var/app/app.xemu.xemu/data/xemu/xemu/xbox_hdd.qcow2".
++    </p>
+   </description>
+   <screenshots>
+     <screenshot type="default">
