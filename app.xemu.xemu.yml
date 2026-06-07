@@ -131,3 +131,5 @@ modules:
           version-query: .tag_name
           url: https://api.github.com/repos/xemu-project/xemu/releases/latest
           url-query: .assets[] | select(.name | test("^xemu-.*\\.tar\\.zst")) | .browser_download_url
+      - type: patch
+        path: add-metainfo-description.patch
