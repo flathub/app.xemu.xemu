@@ -69,8 +69,8 @@ modules:
       - pip install --prefix=/app --no-build-isolation .
     sources:
       - type: archive
-        url: https://github.com/pypa/distlib/archive/refs/tags/0.4.1.tar.gz
-        sha256: dedf09aa990187c1c21a10e366184b52e84982869e32ff37cc61e6df2c2c05eb
+        url: https://github.com/pypa/distlib/archive/refs/tags/0.4.2.tar.gz
+        sha256: 979b627b1ed7c51e23ae526879924d59405ad1e2a1e73641f997f92bdabc57da
         x-checker-data:
           type: anitya
           project-id: 34504
@@ -120,8 +120,8 @@ modules:
         ../XEMU_VERSION)'"/></releases></component>|' $FLATPAK_DEST/share/metainfo/app.xemu.xemu.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/xemu-project/xemu/releases/download/v0.8.135/xemu-0.8.135.tar.zst
-        sha256: e76059eeaf079c6cf65e01668fd2352e9c5b141613e50139767073136e44287a
+        url: https://github.com/xemu-project/xemu/releases/download/v0.8.136/xemu-0.8.136.tar.zst
+        sha256: 92a09305a87d7dabaecc335fa54ca888117aab10fe22af6ad73fc0d3cdd20c1f
         strip-components: 2
         x-checker-data:
           type: json
