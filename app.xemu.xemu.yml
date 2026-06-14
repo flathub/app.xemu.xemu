@@ -43,11 +43,12 @@ modules:
       - type: archive
         url: https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.1/libslirp-v4.9.1.tar.gz
         sha256: 3970542143b7c11e6a09a4d2b50f30a133473c41f15ed0bdcc3b7a1c450d9a5c
-        x-checker-data:
-          type: anitya
-          project-id: 96796
-          stable-only: true
-          url-template: https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v$version/libslirp-v$version.tar.gz
+        # Causing issues due to using the 20201217 version
+        # x-checker-data:
+        #   type: anitya
+        #   project-id: 96796
+        #   stable-only: true
+        #   url-template: https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v$version/libslirp-v$version.tar.gz
 
   - name: PyYAML
     buildsystem: simple
@@ -69,8 +70,8 @@ modules:
       - pip install --prefix=/app --no-build-isolation .
     sources:
       - type: archive
-        url: https://github.com/pypa/distlib/archive/refs/tags/0.4.2.tar.gz
-        sha256: 979b627b1ed7c51e23ae526879924d59405ad1e2a1e73641f997f92bdabc57da
+        url: https://github.com/pypa/distlib/archive/refs/tags/0.4.3.tar.gz
+        sha256: 421a2a177a9c6a725d821c27e69e9e06429dd6b9d9c44c51689412fb61936b51
         x-checker-data:
           type: anitya
           project-id: 34504
