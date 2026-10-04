@@ -25,7 +25,7 @@ The `flatpak-builder` package is required.
 
 - Install the SDK
 
-`flatpak install org.freedesktop.Platform/x86_64/25.08 org.freedesktop.Sdk/x86_64/25.08`
+`flatpak install org.freedesktop.Platform/x86_64/26.08 org.freedesktop.Sdk/x86_64/26.08`
 
 - Build xemu
 
